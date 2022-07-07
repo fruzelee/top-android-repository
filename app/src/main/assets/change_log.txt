@@ -2,3 +2,4 @@ v1.0
 #Change Log:
 -initial commit
 -added change_log
+-updated .gitignore
