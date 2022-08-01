@@ -17,3 +17,5 @@ v1.0
 -feat: add custom font support
 -docs: added README.md
 -docs: updated README.md
+-testing: perform the data caching test with Room Database
+-testing: evaluate the values of the test results by the Google Truth Library
