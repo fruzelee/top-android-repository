@@ -20,3 +20,5 @@ v1.0
 -testing: perform the data caching test with Room Database
 -testing: evaluate the values of the test results by the Google Truth Library
 -docs: added badge on README.md
+-docs: added LICENSE
+-docs: updated README

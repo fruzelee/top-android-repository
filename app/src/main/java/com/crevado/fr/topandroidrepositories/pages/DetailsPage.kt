@@ -113,7 +113,7 @@ fun DetailsPage(navController: NavController, viewModel: MainViewModel) {
 fun formattedDateTime(createdAt: String): String {
     val parser =  SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
     val formatter = SimpleDateFormat("MM-dd-yy HH:ss")
-    return formatter.format(parser.parse(createdAt))
+    return formatter.format(parser.parse(createdAt)!!)
 }
 
 @Composable
@@ -160,7 +160,6 @@ fun seePreview() {
                 Spacer(modifier = Modifier.height(10.dp))
                 Text(text = "time", fontWeight = FontWeight.Normal)
             }
-
 
         }
 
