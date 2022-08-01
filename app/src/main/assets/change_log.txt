@@ -15,3 +15,5 @@ v1.0
 -feat: add launcher icon
 -fix: add spaces on the app name
 -feat: add custom font support
+-docs: added README.md
+-docs: updated README.md
