@@ -107,14 +107,13 @@ fun RepositoryListPage(navController: NavController, viewModel: MainViewModel) {
 
 }
 
-
 @Composable
 fun RepoItem(item: GithubData, navController: NavController, viewModel: MainViewModel) {
     Row(verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Start,
         modifier = Modifier
             .fillMaxWidth()
-            .height(65.dp)
+            .height(75.dp)
             .background(
                 color = Color(0xffEAF0EC),
                 shape = RoundedCornerShape(10.dp)
