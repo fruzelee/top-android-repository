@@ -1,10 +1,11 @@
 v1.0
 #Change Log:
--initial commit
--added change_log
--updated .gitignore
+-init: initial commit
+-docs: added change_log
+-chore: updated .gitignore
 -feat!: added core features, including repository list and details after the medical emergencies.
 -BREAKING CHANGE: repository list with offline browsing support
 -BREAKING CHANGE: repository details with offline browsing support
 -BREAKING CHANGE: added sorting options by either last update date time or star count
 -BREAKING CHANGE: Selected sorting option persists in further app sessions
+-fix: updated keyboardOptions for search

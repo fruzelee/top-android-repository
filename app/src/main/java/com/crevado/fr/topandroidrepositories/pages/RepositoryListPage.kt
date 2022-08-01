@@ -26,11 +26,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
-import androidx.compose.ui.platform.textInputServiceFactory
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -209,6 +209,7 @@ fun SearchBar(viewModel: MainViewModel, data: List<GithubData>) {
             ),
             keyboardActions = KeyboardActions(onDone = { keyboardController?.hide() }),
             keyboardOptions = KeyboardOptions(
+                capitalization = KeyboardCapitalization.Words,
                 imeAction = ImeAction.Done
             )
 
