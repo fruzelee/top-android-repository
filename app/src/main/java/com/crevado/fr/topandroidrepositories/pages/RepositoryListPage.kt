@@ -149,7 +149,6 @@ fun RepoItem(item: GithubData, navController: NavController, viewModel: MainView
 
         Spacer(modifier = Modifier.width(15.dp))
 
-
         Column {
             Text(
                 text = item.name,
@@ -207,11 +206,36 @@ fun SearchBar(viewModel: MainViewModel, data: List<GithubData>) {
                 focusedIndicatorColor = Color.Transparent,
                 unfocusedIndicatorColor = Color.Transparent
             ),
-            keyboardActions = KeyboardActions(onDone = { keyboardController?.hide() }),
             keyboardOptions = KeyboardOptions(
                 capitalization = KeyboardCapitalization.Words,
                 imeAction = ImeAction.Done
-            )
+            ),
+            keyboardActions = KeyboardActions(onDone = {
+                keyboardController?.hide()
+
+                if (searchText.text.trim() == "Android") {
+                    viewModel.prefsHelper.put("search_text", searchText.text.trim())
+                    viewModel.apiSearchRepo(
+                        searchKey = searchText.text.trim(),
+                        viewModel.prefsHelper["sort", ""]
+                    )
+                } else if (searchText.text
+                        .trim()
+                        .isEmpty()
+                ) {
+                    Toast
+                        .makeText(context, "Search bar is empty!", Toast.LENGTH_SHORT)
+                        .show()
+                } else {
+                    Toast
+                        .makeText(
+                            context,
+                            "Search with 'Android' keyword",
+                            Toast.LENGTH_SHORT
+                        )
+                        .show()
+                }
+            })
 
         )
 
@@ -359,9 +383,7 @@ fun SearchBar(viewModel: MainViewModel, data: List<GithubData>) {
             Spacer(modifier = Modifier.width(10.dp))
         }
 
-
     }
-
 
 }
 
@@ -372,6 +394,3 @@ fun getFilteredData(sortType: String, dataSource: MainViewModel) {
     }
 
 }
-
-
-

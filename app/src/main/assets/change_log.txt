@@ -9,3 +9,4 @@ v1.0
 -BREAKING CHANGE: added sorting options by either last update date time or star count
 -BREAKING CHANGE: Selected sorting option persists in further app sessions
 -fix: updated keyboardOptions for search
+-feat: search functionality by keyboardActions done

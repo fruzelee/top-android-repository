@@ -49,8 +49,8 @@ class MainViewModel @Inject constructor(
                 mainRepository.apiRepositories(hashMap).let {
                     val type = object : TypeToken<GithubSearchData>() {}.type
                     val result = Gson().fromJson<GithubSearchData>(
-                            it.body()?.toString(), type
-                        )
+                        it.body()?.string(), type
+                    )
 
                     when(it.code()) {
                         200 -> {
@@ -72,7 +72,7 @@ class MainViewModel @Inject constructor(
                         }
                     }
 
-                 }
+                }
             } catch (exception: Exception) {
 
             }
@@ -81,7 +81,7 @@ class MainViewModel @Inject constructor(
             }
         }
 
-     fun clear() {
+    fun clear() {
         data.clear()
     }
 }
