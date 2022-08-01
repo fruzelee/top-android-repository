@@ -1,3 +1,11 @@
+# Welcome to Top Android Repositories
+
+[![Platform](https://img.shields.io/badge/platform-Android-yellow.svg)](https://www.android.com)
+[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)
+[![Gradle Version](https://img.shields.io/badge/gradle-7.2.1-green.svg)](https://docs.gradle.org/current/release-notes)
+[![Awesome Kotlin Badge](https://kotlin.link/awesome-kotlin.svg)](https://github.com/KotlinBy/awesome-kotlin)
+[![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-1.1.1-blueviolet)](https://developer.android.com/jetpack/androidx/releases/compose)
+
 # Top Android Repositories
 
 A test application which shows the top 50 top most starred github repositories by searching with
