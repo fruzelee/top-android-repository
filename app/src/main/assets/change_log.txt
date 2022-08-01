@@ -13,3 +13,4 @@ v1.0
 -update: increase the item height on the repository list page
 -update: new drawable for the launcher page
 -feat: added launcher icon
+-fix: added spaces on the app name
