@@ -83,10 +83,10 @@ fun RepositoryListPage(navController: NavController, viewModel: MainViewModel) {
                 modifier = Modifier.align(Alignment.Center)
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.ic_github_brands),
+                    painter = painterResource(id = R.drawable.ic_search_repositories),
                     contentDescription = "",
                     modifier = Modifier.size(
-                        100.dp
+                        250.dp
                     )
                 )
                 Spacer(modifier = Modifier.height(20.dp))
