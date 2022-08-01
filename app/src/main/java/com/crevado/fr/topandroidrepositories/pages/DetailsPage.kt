@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.graphics.drawable.toBitmap
 import androidx.navigation.NavController
 import com.crevado.fr.topandroidrepositories.activity.MainViewModel
+import com.crevado.fr.topandroidrepositories.ui.theme.MyCustomFont
 import com.skydoves.landscapist.glide.GlideImage
 import java.text.SimpleDateFormat
 
@@ -79,12 +80,28 @@ fun DetailsPage(navController: NavController, viewModel: MainViewModel) {
                     .background(color = Color(0xffEAF0EC), shape = RoundedCornerShape(10.dp))
                     .padding(all = 15.dp))  {
 
-                Text(text = viewModel.detailData.name, fontWeight = FontWeight.SemiBold)
+                Text(
+                    text = viewModel.detailData.name,
+                    fontFamily = MyCustomFont,
+                    fontWeight = FontWeight.SemiBold
+                )
                 Spacer(modifier = Modifier.height(15.dp))
-                Text(text = viewModel.detailData.description, fontWeight = FontWeight.Normal)
+                Text(
+                    text = viewModel.detailData.description,
+                    fontFamily = MyCustomFont,
+                    fontWeight = FontWeight.Normal
+                )
                 Spacer(modifier = Modifier.height(10.dp))
-                Text(text = "Last updated on: ${formattedDateTime(viewModel.detailData.createdAt).split(" ")[0]}," +
-                        " ${formattedDateTime(viewModel.detailData.createdAt).split(" ")[1]}", fontWeight = FontWeight.Normal)
+                Text(
+                    text = "Last updated on: ${
+                        formattedDateTime(viewModel.detailData.createdAt).split(
+                            " "
+                        )[0]
+                    }," +
+                            " ${formattedDateTime(viewModel.detailData.createdAt).split(" ")[1]}",
+                    fontFamily = MyCustomFont,
+                    fontWeight = FontWeight.Normal
+                )
             }
 
 

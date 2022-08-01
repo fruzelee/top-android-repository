@@ -42,6 +42,7 @@ import androidx.room.withTransaction
 import com.crevado.fr.topandroidrepositories.R
 import com.crevado.fr.topandroidrepositories.activity.MainViewModel
 import com.crevado.fr.topandroidrepositories.data.local_db.GithubData
+import com.crevado.fr.topandroidrepositories.ui.theme.MyCustomFont
 import com.crevado.fr.topandroidrepositories.utils.LoadingView
 import com.skydoves.landscapist.glide.GlideImage
 import kotlinx.coroutines.launch
@@ -94,6 +95,7 @@ fun RepositoryListPage(navController: NavController, viewModel: MainViewModel) {
                     "Search Top \nAndroid Repositories",
                     textAlign = TextAlign.Center,
                     fontSize = 30.sp,
+                    fontFamily = MyCustomFont,
                     fontWeight = FontWeight.SemiBold
                 )
             }
@@ -152,6 +154,7 @@ fun RepoItem(item: GithubData, navController: NavController, viewModel: MainView
             Text(
                 text = item.name,
                 fontSize = 15.sp,
+                fontFamily = MyCustomFont,
                 fontWeight = FontWeight.SemiBold,
                 color = Color.Black
             )
@@ -159,6 +162,7 @@ fun RepoItem(item: GithubData, navController: NavController, viewModel: MainView
             Text(
                 text = item.fullName,
                 fontSize = 13.sp,
+                fontFamily = MyCustomFont,
                 fontWeight = FontWeight.Normal,
                 color = Color.Gray
             )
@@ -186,7 +190,7 @@ fun SearchBar(viewModel: MainViewModel, data: List<GithubData>) {
     ) {
         TextField(
             value = searchText,
-            placeholder = { Text(text = "Search here (eg: Android)", fontSize = 15.sp) },
+            placeholder = { Text(text = "Search here (eg: Android)", fontSize = 15.sp,  fontFamily = MyCustomFont) },
             onValueChange = {
                 searchText = it
             },
@@ -196,7 +200,7 @@ fun SearchBar(viewModel: MainViewModel, data: List<GithubData>) {
                 .background(Color.Transparent)
                 .padding(start = 5.dp, end = 5.dp),
             textStyle = TextStyle(
-                fontSize = 15.sp,
+                fontSize = 15.sp, fontFamily = MyCustomFont
             ),
             colors = TextFieldDefaults.textFieldColors(
                 textColor = Color.Black,
@@ -314,7 +318,7 @@ fun SearchBar(viewModel: MainViewModel, data: List<GithubData>) {
                         }
                     }) {
                         Text(
-                            "Filter by Updated Date",
+                            "Filter by Updated Date", fontFamily = MyCustomFont,
                             fontWeight = if (viewModel.prefsHelper["sort", ""] == "date") {
                                 FontWeight.Bold
                             } else {
@@ -340,7 +344,7 @@ fun SearchBar(viewModel: MainViewModel, data: List<GithubData>) {
 
                     }) {
                         Text(
-                            "Filter by Star Count",
+                            "Filter by Star Count", fontFamily = MyCustomFont,
                             fontWeight = if (viewModel.prefsHelper["sort", ""] == "star") {
                                 FontWeight.Bold
                             } else {
@@ -364,7 +368,7 @@ fun SearchBar(viewModel: MainViewModel, data: List<GithubData>) {
                         }
 
                     }) {
-                        Text("Clear Search")
+                        Text("Clear Search", fontFamily = MyCustomFont)
                     }
                 }
                 Icon(
