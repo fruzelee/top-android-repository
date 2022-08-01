@@ -26,6 +26,7 @@ import com.crevado.fr.topandroidrepositories.activity.MainViewModel
 import com.crevado.fr.topandroidrepositories.ui.theme.MyCustomFont
 import com.skydoves.landscapist.glide.GlideImage
 import java.text.SimpleDateFormat
+import java.util.*
 
 @Composable
 fun DetailsPage(navController: NavController, viewModel: MainViewModel) {
@@ -113,7 +114,7 @@ fun DetailsPage(navController: NavController, viewModel: MainViewModel) {
 fun formattedDateTime(createdAt: String): String {
     val parser =  SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
     val formatter = SimpleDateFormat("MM-dd-yy HH:ss")
-    return formatter.format(parser.parse(createdAt)!!)
+    return formatter.format(parser.parse(createdAt) as Date)
 }
 
 @Composable

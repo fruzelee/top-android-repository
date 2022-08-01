@@ -22,3 +22,4 @@ v1.0
 -docs: added badge on README.md
 -docs: added LICENSE
 -docs: updated README
+-fix: type mismatch on details page
