@@ -47,6 +47,8 @@ the "Android" keyword.
 - docs: updated README
 - fix: type mismatch on details page
 - docs: updated README
+- docs: added new tag
+- docs: added new stable release with demo apk
 
 # License
 
